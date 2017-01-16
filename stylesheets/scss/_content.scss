@@ -1,0 +1,97 @@
+.info-box {
+	padding: 0.5em 1.875em;
+	color: #000;
+//	flex: 0 0 350px;
+		@include bp(atSmall) {
+		font-size: 1rem;
+		padding: 0;
+	}
+}
+
+.title {
+	display: block;
+	padding: 0.5em 0em;
+	font-weight: bold;
+}
+
+.poster-wrapper {
+	display: block;
+	position: relative;
+//	flex: 0 0 340px;
+
+//		@include bp(atSmall) {
+//		display: inline-block;
+//		width: 40%;
+//	}
+}
+
+
+.poster {
+	display: relative;
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+max-height: 300px;
+	width: auto;
+//	@include bp(atSmall) {
+//	width: 100%;
+//	}
+
+}
+
+.year {
+	display: inline-block;
+}
+
+.actors, .plot {
+	display: block;
+	margin-bottom: 2.5em;
+			@include bp(atSmall) {
+	margin-bottom: 1.75em;
+	}
+}
+
+.actors {
+			@include bp(atSmall) {
+	font-size: 0.875rem;
+	}
+}
+
+.runtime {
+	flex-basis: 100px;
+}
+
+.rating {
+	display: block;
+}
+
+.num {
+	font-size: 1.75rem;
+	font-weight: bold;
+		@include bp(atSmall) {
+		font-size: 1.5rem;
+	}
+}
+
+.divider {
+	text-align: center;
+	margin: 0 1.75em;
+	flex-basis: 2em;
+		@include bp(atSmall) {
+			flex-basis: 5em;
+	margin: 0.25em;
+	}
+}
+
+.top-info-wrapper {
+	display: flex;
+	margin-bottom: 1.75em;
+	text-align: left;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: 'heebo'; 
+		@include bp(atSmall) {
+	margin-top: 1.75em;
+	font-size: 0.875rem;
+	}
+}

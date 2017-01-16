@@ -1,0 +1,57 @@
+.info-box {
+	padding: 0.5em 1.875em;
+	color: #000;
+}
+
+.title {
+	display: block;
+	padding: 0.5em 0em;
+	font-weight: bold;
+}
+
+.poster-wrapper {
+	display: block;
+	position: relative;
+}
+
+
+.poster {
+	display: relative;
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+max-height: 300px;
+
+}
+
+.year {
+	display: inline-block;
+}
+
+.actors, .plot {
+	display: block;
+	margin-bottom: 2.5em;
+}
+
+
+.rating {
+	display: block;
+}
+
+.num {
+	font-size: 1.75rem;
+	font-weight: bold;
+}
+
+.divider {
+	margin: 0 1.75em;
+}
+
+.top-info-wrapper {
+	display: flex;
+	margin-bottom: 1.75em;
+	text-align: left;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: 'heebo'; 
+}

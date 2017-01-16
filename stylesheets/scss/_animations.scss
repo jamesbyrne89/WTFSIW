@@ -1,0 +1,74 @@
+.invisible {
+	
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+.visible {
+	opacity: 1;
+	transition: all 0.3s;
+}
+
+.off-right {
+	left: 110%;
+	transition: all 1.2s;
+}
+
+.hide {
+	display: none;
+}
+
+.off-left {
+	left: -15%;
+	transition: all 0.2s;
+			@include bp(atSmall) {
+	left: -50%;
+	}
+}
+
+@keyframes flashing {
+    0%   {opacity: 0;}
+    50%  {opacity: 0.5;}
+    50%  {opacity: 1;}
+    75%  {opacity: 0.5;}
+    100% {opacity: 0;}
+}
+
+.shrunk {
+	font-size: 1.75rem;
+	transition: all 0.2s;
+	width: 140px;
+	overflow: visible;
+	padding: 10px;
+	margin-left: 5%;
+	margin-top: 0;
+	color: #fff;
+	background: #FF4429;
+	border: none;
+	@include bp(atSmall) {
+		font-size: 1rem;
+		width: 80px;
+		display: inline-block;
+	}
+}
+
+.sub-small {
+	font-size: 1rem;
+	transition: all 0.3s;
+	width: 500px;
+	overflow: visible;
+	margin-top: -5%;
+	margin-left: -9%;
+	border: none;
+	display: block;
+	transform: rotate(-90deg);
+	@include bp(atSmall) {
+		margin-top: 5px;
+		margin-left: 5px;
+		transform: rotate(0deg);
+		display: inline-block;
+		font-size: 0.75rem;
+		max-width: 30px;
+	}
+
+}

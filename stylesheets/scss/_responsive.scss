@@ -1,0 +1,11 @@
+@mixin bp($point) {
+   @if $point == atSmall {
+     @media (max-width: 475px) { @content ; }
+  }
+   @else if $point == atMedium {
+     @media (max-width: 900px) { @content ; }
+  }
+    @else if $point == atLarge {
+     @media (max-width: 1200px) { @content ; }
+  }
+}
