@@ -12,18 +12,24 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="stylesheets/css/styles.css">
-        <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:400,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Heebo:400,700,900|Lato|Oswald:400,700" rel="stylesheet">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+    <div class="left-line"></div>
     <h1 class="main-title">What the fuck should I watch?</h1>
+    <h2 class="subtitle">Movie night inspiration</h2>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <h2 class="suggestion"></h2>
-        <div class="movie-holder">
+        <h2 class="suggestion hide"></h2>
+        <div class="btn-wrapper">
+        <div class="instructions">Hit Spacebar</div>
+        </div>
+        <div class="movie-holder off-right">
+
             <div class="poster-wrapper">
                     <img class="poster">
             </div>
@@ -38,9 +44,9 @@
                     <span class="rating"></span>
                 </div>
         </div>
-        <div class="try-again invisible"><a>That looks shit. Show me another one.</a></div>
+        <div class="try-again hide invisible"><a>That looks shit. Show me a different one.</a></div>
         <footer>
-        Built with love by James Byrne. Inspired by 'What The Fuck Should I Eat, What The Fuck Should I Drink?' and others. Created using the <a href="https://random-movie.herokuapp.com/">Random Movie API.</a>
+        Created by <a href="http://jamestbyrne.com">James Byrne</a> using the <a href="https://random-movie.herokuapp.com/">Random Movie API</a>. Inspired by 'What The Fuck Should I Eat, What The Fuck Should I Drink?' and others.
         </footer>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>

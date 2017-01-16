@@ -1,7 +1,8 @@
 html {
-	background: #fff;
+	background: #f4f6f8;
    color: #000;     
-   font-family: 'fira sans extra condensed'; 
+   font-family: 'heebo'; 
+   overflow: hidden;
 
 }
 
@@ -16,38 +17,61 @@ box-sizing: border-box;
 }
 
 .main-title {
-	border-left: solid 2px #000;
 	display: flex;
 	align-items:flex-end;
-	font-weight: 900;
+	font-weight: 700;
 	font-size: 6rem;
 	line-height: 1;
-	padding: 200px 0px 0px 10px;
-	margin-left: 10%;
-	margin-top: 0;
+	margin-top: 12%;
 	text-align: left;
-	width: 40%;
-	text-transform: uppercase;
+	width: auto;
+	display: inline-block;
+	text-transform: none;
 	color: #FF4429;
 }
 
-.movie-holder {
-	margin: auto;
+.left-line {
+	width: 10%;
+	height: 5px;
+	background: #000;
+	position: relative;
+	margin-right: 3%;
+	margin-left: 1%;
+	margin-bottom: 1.5em;
+	top: 5%;
+	left: 0;
+	display: inline-block;
+}
+
+.subtitle {
+	font-weight: normal;
+	margin-left: 15%;
+	font-family: 'heebo';
+	font-weight: 400;
+	display: inline-block;
 	width: auto;
-	max-width: 50%;
+}
+
+.movie-holder {
+	width: auto;
+	max-width: 40%;
 	display: flex;
-	background: rgba(255,255,255,0.2);
-	font-family: 'roboto';
+	font-family: 'heebo';
 	overflow: hidden;
 	justify-content: space-around;
 	margin-bottom: 1.75em;
+	position: relative;
+	left: 30%;
+	transition: opacity 0.4s;
+	//transition-property: left 3s;
 }
 
 .suggestion {
 	font-size: 3rem;
+	min-height: 4em;
 		color: #000;
 		font-weight: 900;
-	font-family: 'fira sans extra condensed'; 
+	font-family: 'heebo'; 
 	text-align: center;
 	margin: 0 auto 50px auto;
 	width: 50%;
@@ -60,6 +84,30 @@ background: linear-gradient(45deg, #FF5F6D , #FFC371); /* W3C, IE 10+/ Edge, Fir
 
 .suggestion-name {
 	font-style: italic;
+}
+
+.instructions {
+
+	text-transform: uppercase;
+	color: #000;
+	font-weight: 900;
+	letter-spacing: 0.25em;
+	padding: 0.5em;
+	display: inline-block;
+	width: auto;
+	margin: auto;
+	margin-top: 6em;
+	text-align: center;
+	animation-name: flashing;
+	animation-duration: 2.5s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+
+.btn-wrapper {
+	width: 100%;
+	text-align: center;
 }
 
 .info-box {
@@ -98,6 +146,7 @@ background: linear-gradient(45deg, #FF5F6D , #FFC371); /* W3C, IE 10+/ Edge, Fir
 	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
 box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+max-height: 300px;
 
 }
 
@@ -115,6 +164,11 @@ box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
 	display: block;
 }
 
+.num {
+	font-size: 1.75rem;
+	font-weight: bold;
+}
+
 .divider {
 	margin: 0 1.75em;
 }
@@ -125,7 +179,7 @@ box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
 	text-align: left;
 	font-weight: bold;
 	text-transform: uppercase;
-	font-family: 'fira sans extra condensed'; 
+	font-family: 'heebo'; 
 }
 
 
@@ -137,18 +191,33 @@ box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
 	overflow: visible;
 	padding: 10px;
 	margin-left: 5%;
+	margin-top: 0;
 	color: #fff;
 	background: #FF4429;
 	border: none;
 }
 
+.sub-small {
+	font-size: 1rem;
+	transition: all 0.2s;
+	width: 500px;
+	overflow: visible;
+	margin-top: -5%;
+	margin-left: -9%;
+	border: none;
+	display: block;
+	transform: rotate(-90deg);
+}
+
 .invisible {
 	
-	display: none; 
+	opacity: 0;
+	transition: all 0.3s;
 }
 
 .visible {
-	display: block;
+	opacity: 1;
+	transition: all 0.3s;
 }
 
 .try-again {
@@ -160,22 +229,59 @@ box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
 	font-size: 2rem;
 	font-weight: bold;
 	transition: all 0.5s;
-	background-image: linear-gradient(to right, #fff 50%, #FF4429 50%);
+	background-image: linear-gradient(to right, #f4f6f8 50%, #FF4429 50%);
   background-size: 200%;
-  transition: all 0.4s;
+  transition: all 0.2s;
   width: auto;
   position: relative;
-  &:hover {
+		  &:hover {
     background-position: -100%;
+    cursor: pointer;
+    color: #fff;
   }
 }
+}
+
+.off-right {
+	left: 110%;
+	transition: all 1.2s;
+}
+
+.hide {
+	display: none;
+}
+
+.off-left {
+	left: -15%;
+	transition: all 0.2s;
 }
 
 footer {
 	position: absolute;
 	bottom: 10px;
-	text-align: right;
+	text-align: center;
 	width: 100%;
 	max-width: 100vw;
 	padding: 0.5em 1.75em;
+	font-size: 0.875rem;
+	a{
+		transition: all 0.2s;
+background-image: linear-gradient(to right, #f4f6f8 50%, #FF4429 50%);
+background-size: 200%;
+		  &:hover {
+    background-position: -100%;
+    color: #fff;
+  }
+  &:visited {
+  	color: #000;
+  }
+	}
+}
+
+@keyframes flashing {
+    0%   {opacity: 0;}
+    50%  {opacity: 0.5;}
+    50%  {opacity: 1;}
+    75%  {opacity: 0.5;}
+    100% {opacity: 0;}
 }
