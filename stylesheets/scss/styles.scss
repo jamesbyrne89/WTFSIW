@@ -151,7 +151,7 @@ background: linear-gradient(45deg, #FF5F6D , #FFC371); /* W3C, IE 10+/ Edge, Fir
 	font-style: italic;
 }
 
-.instructions {
+.instructions, .instructions-mob {
 
 	text-transform: uppercase;
 	color: #000;
@@ -168,6 +168,20 @@ background: linear-gradient(45deg, #FF5F6D , #FFC371); /* W3C, IE 10+/ Edge, Fir
 	animation-delay: 2s;
 	animation-iteration-count: infinite;
 	opacity: 0;
+}
+
+.instructions {
+	display: inline-block;
+	@include bp(atMedium) {
+		display: none;
+	}
+}
+
+.instructions-mob {
+	display: none;
+	@include bp(atMedium) {
+		display: inline-block;
+	}
 }
 
 .btn-wrapper {

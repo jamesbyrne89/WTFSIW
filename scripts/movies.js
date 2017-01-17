@@ -74,3 +74,4 @@ document.onkeydown = function(e) {
 
 
 document.querySelector('.try-again a').addEventListener('click', getJSON);
+document.querySelector('main').addEventListener('click', getJSON);
