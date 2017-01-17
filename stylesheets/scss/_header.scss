@@ -1,0 +1,61 @@
+.main-title {
+	font-weight: 700;
+	font-size: 6rem;
+	line-height: 1;
+	margin-top: 12%;
+	max-width: 85%;
+	text-align: left;
+	width: auto;
+	display: inline-block;
+	text-transform: none;
+	color: #FF4429;
+		@include bp(atMedium) {
+		line-height: 0.8;
+		margin-top: 5vh;
+	}
+		@include bp(atSmall) {
+		line-height: 0.8;
+		margin-top: 5vh;
+		font-size: 3rem;
+	}
+
+}
+
+.left-line {
+	width: 10%;
+	height: 5px;
+	background: #000;
+	position: relative;
+	margin-right: 3%;
+	margin-left: 1%;
+	margin-bottom: 1.5em;
+	top: 5%;
+	left: 0;
+	display: inline-block;
+	@include bp(atLarge) {
+		margin-bottom: 7.5em;
+	}
+		@include bp(atMedium) {
+		margin-bottom: 1.875em;
+		top: 5vh;
+		display: block;
+		width: 40%;
+	}
+}
+
+.subtitle {
+	font-weight: normal;
+	margin-left: 15%;
+	font-family: 'heebo';
+	font-weight: 400;
+	display: inline-block;
+	width: auto;
+@include bp(atMedium) {
+		margin-left: 0;
+	}
+@include bp(atSmall) {
+		line-height: 0.8;
+		margin-top: 5%;
+		font-size: 1rem;
+	}
+}

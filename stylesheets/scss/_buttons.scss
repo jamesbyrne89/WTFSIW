@@ -1,0 +1,78 @@
+.instructions, .instructions-mob {
+
+	text-transform: uppercase;
+	color: #000;
+	font-weight: 900;
+	letter-spacing: 0.25em;
+	padding: 0.5em;
+	display: inline-block;
+	width: auto;
+	margin: auto;
+	margin-top: 6em;
+	text-align: center;
+	animation-name: flashing;
+	animation-duration: 2.5s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+
+.instructions {
+	display: inline-block;
+	@include bp(atMedium) {
+		display: none;
+	}
+}
+
+.instructions-mob {
+	display: none;
+	margin-top: 4em;
+	@include bp(atMedium) {
+		padding-top: 10vh;
+		padding-bottom: 20vh;
+		display: inline-block;
+		font-size: 1.25rem;
+	}
+}
+
+.btn-wrapper {
+	width: 100%;
+	text-align: center;
+}
+
+
+.try-again {
+	margin: auto;
+	text-align: center;
+	width: 100%;
+	 position: relative;
+	 bottom: 12%;
+	 	@include bp(atSmall) {
+			transition: all 0.5s;
+	margin-bottom: 3em;
+	}
+	a {
+	color: #000;
+	font-size: 2rem;
+	font-weight: bold;
+
+	background-image: linear-gradient(to right, #f4f6f8 50%, #FF4429 50%);
+  background-size: 201%;
+  transition: all 0.2s;
+  width: auto;
+  position: relative;
+  	@include bp(atSmall) {
+		font-size: 1rem;
+		
+	}
+		  &:hover {
+    background-position: -100%;
+    cursor: pointer;
+    color: #fff;
+    	@include bp(atSmall) {
+		background-position: 0%;
+		color: #FF4429;
+	}
+  }
+}
+}

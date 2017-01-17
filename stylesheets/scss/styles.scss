@@ -1,6 +1,17 @@
 @import '_responsive';
+@import '_header';
 @import '_content';
+@import '_buttons';
 
+* {
+	font-smooth: auto;
+font-smooth: never;
+font-smooth: always;
+margin: 0;
+padding: 0;
+text-rendering: optimizeLegibility;
+box-sizing: border-box;
+}
 
 html {
 	background: #f4f6f8;
@@ -24,80 +35,6 @@ main {
 		padding: 0 1em;
 	}
 }
-
-* {
-	font-smooth: auto;
-font-smooth: never;
-font-smooth: always;
-margin: 0;
-padding: 0;
-text-rendering: optimizeLegibility;
-box-sizing: border-box;
-}
-
-.main-title {
-	font-weight: 700;
-	font-size: 6rem;
-	line-height: 1;
-	margin-top: 12%;
-	max-width: 85%;
-	text-align: left;
-	width: auto;
-	display: inline-block;
-	text-transform: none;
-	color: #FF4429;
-		@include bp(atMedium) {
-		line-height: 0.8;
-		margin-top: 5vh;
-	}
-		@include bp(atSmall) {
-		line-height: 0.8;
-		margin-top: 5vh;
-		font-size: 3rem;
-	}
-
-}
-
-.left-line {
-	width: 10%;
-	height: 5px;
-	background: #000;
-	position: relative;
-	margin-right: 3%;
-	margin-left: 1%;
-	margin-bottom: 1.5em;
-	top: 5%;
-	left: 0;
-	display: inline-block;
-	@include bp(atLarge) {
-		margin-bottom: 7.5em;
-	}
-		@include bp(atMedium) {
-		margin-bottom: 1.875em;
-		top: 5vh;
-		display: block;
-		width: 40%;
-	}
-}
-
-.subtitle {
-	font-weight: normal;
-	margin-left: 15%;
-	font-family: 'heebo';
-	font-weight: 400;
-	display: inline-block;
-	width: auto;
-@include bp(atMedium) {
-		margin-left: 0;
-	}
-@include bp(atSmall) {
-		line-height: 0.8;
-		margin-top: 5%;
-		font-size: 1rem;
-	}
-}
-
-
 
 .suggestion {
 	font-size: 3rem;
@@ -125,85 +62,6 @@ box-sizing: border-box;
 
 .suggestion-name {
 	font-style: italic;
-}
-
-.instructions, .instructions-mob {
-
-	text-transform: uppercase;
-	color: #000;
-	font-weight: 900;
-	letter-spacing: 0.25em;
-	padding: 0.5em;
-	display: inline-block;
-	width: auto;
-	margin: auto;
-	margin-top: 6em;
-	text-align: center;
-	animation-name: flashing;
-	animation-duration: 2.5s;
-	animation-delay: 2s;
-	animation-iteration-count: infinite;
-	opacity: 0;
-}
-
-.instructions {
-	display: inline-block;
-	@include bp(atMedium) {
-		display: none;
-	}
-}
-
-.instructions-mob {
-	display: none;
-	margin-top: 4em;
-	@include bp(atMedium) {
-		padding-top: 10vh;
-		padding-bottom: 20vh;
-		display: inline-block;
-		font-size: 1.25rem;
-	}
-}
-
-.btn-wrapper {
-	width: 100%;
-	text-align: center;
-}
-
-
-.try-again {
-	margin: auto;
-	text-align: center;
-	width: 100%;
-	 position: relative;
-	 bottom: 12%;
-	 	@include bp(atSmall) {
-			transition: all 0.5s;
-	margin-bottom: 3em;
-	}
-	a {
-	color: #000;
-	font-size: 2rem;
-	font-weight: bold;
-
-	background-image: linear-gradient(to right, #f4f6f8 50%, #FF4429 50%);
-  background-size: 201%;
-  transition: all 0.2s;
-  width: auto;
-  position: relative;
-  	@include bp(atSmall) {
-		font-size: 1rem;
-		
-	}
-		  &:hover {
-    background-position: -100%;
-    cursor: pointer;
-    color: #fff;
-    	@include bp(atSmall) {
-		background-position: 0%;
-		color: #FF4429;
-	}
-  }
-}
 }
 
 
