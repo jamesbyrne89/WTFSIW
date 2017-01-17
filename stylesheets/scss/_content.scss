@@ -1,3 +1,26 @@
+.movie-holder {
+	width: auto;
+	max-width: 50%;
+	display: flex;
+	font-family: 'heebo';
+	overflow: hidden;
+	justify-content: space-around;
+	margin-bottom: 2.5em;
+	position: relative;
+	left: 30%;
+	transition: opacity 0.4s;
+		@include bp(atMedium) {
+		max-width: 90vw;
+		left: 5%;
+
+	}
+		@include bp(atSmall) {
+		left: 0;
+		max-width: 95vw;
+		flex-wrap: wrap;
+	}
+}
+
 .info-box {
 	padding: 0.5em 1.875em;
 	color: #000;

@@ -97,44 +97,18 @@ box-sizing: border-box;
 	}
 }
 
-.movie-holder {
-	width: auto;
-	max-width: 50%;
-	display: flex;
-	
-	font-family: 'heebo';
-	overflow: hidden;
-	justify-content: space-around;
-	margin-bottom: 1.75em;
-	position: relative;
-	left: 30%;
-	transition: opacity 0.4s;
-		@include bp(atMedium) {
-		max-width: 90vw;
-		left: 5%;
 
-	}
-		@include bp(atSmall) {
-		left: 0;
-		max-width: 95vw;
-		flex-wrap: wrap;
-	}
-}
 
 .suggestion {
 	font-size: 3rem;
 	min-height: 4em;
-		color: #000;
-		font-weight: 900;
+	color: #000;
+	font-weight: 900;
 	font-family: 'heebo'; 
 	text-align: center;
 	margin: -100px auto 0px auto;
 	width: 50%;
 	text-transform: uppercase;
-	background: #FF5F6D; /* fallback for old browsers */
-background: -webkit-linear-gradient(45deg, #FF5F6D , #FFC371); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(45deg, #FF5F6D , #FFC371); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
--webkit-background-clip: text;
 @include bp(atMedium) {
 		width: 90%;
 		margin-top: 1.75em;
@@ -181,9 +155,12 @@ background: linear-gradient(45deg, #FF5F6D , #FFC371); /* W3C, IE 10+/ Edge, Fir
 
 .instructions-mob {
 	display: none;
+	margin-top: 4em;
 	@include bp(atMedium) {
 		padding-top: 10vh;
+		padding-bottom: 20vh;
 		display: inline-block;
+		font-size: 1.25rem;
 	}
 }
 
@@ -200,21 +177,22 @@ background: linear-gradient(45deg, #FF5F6D , #FFC371); /* W3C, IE 10+/ Edge, Fir
 	 position: relative;
 	 bottom: 12%;
 	 	@include bp(atSmall) {
-		
+			transition: all 0.5s;
+	margin-bottom: 3em;
 	}
 	a {
 	color: #000;
 	font-size: 2rem;
 	font-weight: bold;
-	transition: all 0.5s;
+
 	background-image: linear-gradient(to right, #f4f6f8 50%, #FF4429 50%);
-  background-size: 200%;
+  background-size: 201%;
   transition: all 0.2s;
   width: auto;
   position: relative;
   	@include bp(atSmall) {
-		font-size: 1.25rem;
-		margin-bottom: 3em;
+		font-size: 1rem;
+		
 	}
 		  &:hover {
     background-position: -100%;
@@ -222,6 +200,7 @@ background: linear-gradient(45deg, #FF5F6D , #FFC371); /* W3C, IE 10+/ Edge, Fir
     color: #fff;
     	@include bp(atSmall) {
 		background-position: 0%;
+		color: #FF4429;
 	}
   }
 }
@@ -251,6 +230,7 @@ background-size: 201%;
     color: #fff;
         	@include bp(atMedium) {
 		background-position: 0%;
+		color: #FF4429;
 	}
   }
   &:visited {
