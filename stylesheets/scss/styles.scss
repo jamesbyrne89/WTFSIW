@@ -195,7 +195,6 @@ background: linear-gradient(45deg, #FF5F6D , #FFC371); /* W3C, IE 10+/ Edge, Fir
 
 .try-again {
 	margin: auto;
-	margin-bottom: 3em;
 	text-align: center;
 	width: 100%;
 	 position: relative;
@@ -215,7 +214,7 @@ background: linear-gradient(45deg, #FF5F6D , #FFC371); /* W3C, IE 10+/ Edge, Fir
   position: relative;
   	@include bp(atSmall) {
 		font-size: 1.25rem;
-
+		margin-bottom: 3em;
 	}
 		  &:hover {
     background-position: -100%;
