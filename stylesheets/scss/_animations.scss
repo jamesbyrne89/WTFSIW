@@ -21,7 +21,7 @@
 .off-left {
 	left: -15%;
 	transition: all 0.2s;
-			@include bp(atSmall) {
+			@include bp(atMedium) {
 	left: -50%;
 	}
 }
@@ -57,11 +57,20 @@
 	transition: all 0.3s;
 	width: 500px;
 	overflow: visible;
-	margin-top: -5%;
-	margin-left: -9%;
+	margin-top: -6%;
+	margin-left: -11%;
 	border: none;
 	display: block;
 	transform: rotate(-90deg);
+	@include bp(atMedium) {
+		margin-top: 25px;
+		top: 50%;
+		margin-left: 5px;
+		transform: rotate(0deg);
+		display: inline-block;
+		font-size: 0.875rem;
+		max-width: 30px;
+	}
 	@include bp(atSmall) {
 		margin-top: 5px;
 		margin-left: 5px;

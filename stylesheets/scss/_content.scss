@@ -43,6 +43,12 @@ max-height: 300px;
 	display: inline-block;
 }
 
+.genre {
+	@include bp(atMedium) {
+		flex: 0 0 100px;
+	}
+}
+
 .actors, .plot {
 	display: block;
 	margin-bottom: 2.5em;

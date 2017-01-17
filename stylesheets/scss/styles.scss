@@ -44,11 +44,11 @@ box-sizing: border-box;
 	display: inline-block;
 	text-transform: none;
 	color: #FF4429;
-			@include bp(atMedium) {
+		@include bp(atMedium) {
 		line-height: 0.8;
 		margin-top: 5vh;
 	}
-				@include bp(atSmall) {
+		@include bp(atSmall) {
 		line-height: 0.8;
 		margin-top: 5vh;
 		font-size: 3rem;
@@ -107,10 +107,14 @@ box-sizing: border-box;
 	position: relative;
 	left: 30%;
 	transition: opacity 0.4s;
+		@include bp(atMedium) {
+		max-width: 90vw;
+		left: 5%;
+
+	}
 		@include bp(atSmall) {
-		width: 100%;
-		max-width: 95vw;
 		left: 0;
+		max-width: 95vw;
 		flex-wrap: wrap;
 	}
 }
@@ -129,11 +133,15 @@ box-sizing: border-box;
 background: -webkit-linear-gradient(45deg, #FF5F6D , #FFC371); /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(45deg, #FF5F6D , #FFC371); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 -webkit-background-clip: text;
+@include bp(atMedium) {
+		width: 90%;
+		margin-top: 1.75em;
+	}
 @include bp(atSmall) {
 		font-size: 1.75rem;
 		line-height: 1;
 		width: 100%;
-		margin-top: 1.75em;
+		
 		margin-bottom: 0.875em;
 	}
 
