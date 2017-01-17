@@ -19,8 +19,7 @@ body {
 }
 
 main {
-	overflow: hidden;
-	flex: 1 0 85vh;
+	flex: 1 1 85vh;
 			@include bp(atMedium) {
 		padding: 0 1em;
 	}
