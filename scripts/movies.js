@@ -23,12 +23,14 @@ function getJSON() {
     document.querySelector('.try-again').classList.remove('hide');
 
 
-    setTimeout(function() {
+    
         $.ajax({
             url: 'https://random-movie.herokuapp.com/random',
             crossDomain: true,
             dataType: 'jsonp',
             success: function(data) {
+
+            	setTimeout(function() {
                 let source = document.createAttribute("src");
                 source.value = (data.Poster);
                 let altText = document.createAttribute("alt");
@@ -52,17 +54,14 @@ function getJSON() {
                 document.querySelector('.movie-holder').classList.remove('off-right');
                 document.querySelector('.movie-holder').classList.add('visible');
                 document.querySelector('.movie-holder').classList.remove('invisible');
+                }, 800);
+
                    setTimeout(function() {
         document.querySelector('.try-again').classList.remove('invisible');
         document.querySelector('.try-again').classList.add('visible');
     }, 2000);
             }
         });
-
-    }, 800);
-
- 
-
 }
 
 document.onkeydown = function(e) {
