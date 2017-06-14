@@ -14,14 +14,14 @@ footer {
 	}
 	a{
 		transition: all 0.2s;
-background-image: linear-gradient(to right, #f4f6f8 50%, #FF4429 50%);
+background-image: linear-gradient(to right, #f4f6f8 50%, #FC0E0C 50%);
 background-size: 201%;
 		  &:hover {
     background-position: -100%;
     color: #fff;
         	@include bp(atMedium) {
 		background-position: 0%;
-		color: #FF4429;
+		color: #FC0E0C;
 	}
   }
   &:visited {
